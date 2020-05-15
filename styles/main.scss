@@ -1,0 +1,106 @@
+$facebook: #168ef4;
+$youTube: hsl(348, 97%, 39%);
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$twitter: hsl(203, 89%, 53%);
+$instagram-1: hsl(37, 97%, 70%);
+$instagram-2: hsl(329, 70%, 58%);
+$text-color: #5f616d;
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1d2029;
+  /* border: 1px sol id red; */
+}
+header{
+  background: #f8f9fe;
+  padding-bottom: 90px;
+  border-radius: 0 0 20px 20px;
+  h1{
+    margin: 0;
+    font-size: 1.7em;
+  }
+  p{
+    color: $text-color;
+    margin: .5em 0;
+    font-weight: 600;
+    border-bottom: 2px solid $text-color;
+    padding-bottom: 1.5em;
+  }
+}
+.top-cards{
+  margin-top: -50px;
+}
+.wrapper{
+  padding: 0 30px;
+  .grid{
+    display: grid;
+    grid-row-gap: 25px;
+  }
+  .card{
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f0f3fa;
+    text-align: center;
+    padding: 2.1em 0;
+    position: relative;
+    &:before{
+      content: "";
+      height: 4px;
+      display: block;
+      background: $facebook ;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    &.facebook:before{
+      background: $facebook;
+    }
+    &.instagram:before{
+      background: linear-gradient(to right, $instagram-1 0%, $instagram-2 100%);
+    }
+    &.twitter:before{
+      background: $twitter;
+    }
+    &.youtube:before{
+      background-color: $youTube;
+    }
+    .card-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f717e;
+      font-size: .8em;
+      font-weight: bold;
+      img{
+        margin-right: 5px;
+      }
+    }
+    .card-followers-total{
+        .card-followers-number{
+            font-size: 50px;
+            font-weight: 700;
+        }
+        .card-followers-title{
+            display: block;
+            text-transform: uppercase;
+            color: $text-color;
+            letter-spacing: 4px;
+            font-size: .75em;
+        }
+    }
+    .card-followers-today{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      color: $lime-green;
+      font-size: .7em;
+      font-weight: bold;
+      img{
+        margin-right: 5px;
+      }
+    }
+  }
+}
